@@ -5,42 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu site - Versão 3 — corrigida</title>
   <style>
+    :root {
+      --verde: #168a4d;
+      --verde-escuro: #0d6337;
+      --fundo: #e8f7ef;
+      --texto: #173126;
+      --texto-suave: #53665c;
+      --borda: #cfe4d8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
-      font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-      background: #1e9e5a;
-      padding: 1rem;
+      padding: 1.5rem;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--texto);
+      background: linear-gradient(135deg, #542078, #9b4dcc);
     }
+
     .cartao {
       background: #fff;
-      border-radius: 20px;
-      padding: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: 1.25rem;
+      padding: clamp(1.5rem, 5vw, 2.75rem);
       max-width: 520px;
       width: 100%;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+      box-shadow: 0 1.25rem 3rem rgba(4, 45, 24, .24);
       text-align: center;
-      color: #1d1d1f;
     }
-    .emoji { font-size: 4rem; }
-    h1 { margin: .5rem 0; color: #1e9e5a; }
+
+    .emoji { font-size: 4rem; line-height: 1; }
+    h1 { margin: .75rem 0 .5rem; color: var(--verde-escuro); font-size: clamp(1.7rem, 6vw, 2.25rem); }
+    p { margin: 0; color: var(--texto-suave); line-height: 1.6; }
+
     .versao {
       margin-top: 1.5rem;
       padding: 1rem;
-      border-radius: 12px;
-      background: #f2f2f7;
+      border: 1px solid var(--borda);
+      border-radius: .75rem;
+      background: var(--fundo);
       text-align: left;
-      line-height: 1.8;
+      line-height: 1.9;
     }
-    code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
-    footer { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: .85rem; }
+
+    code {
+      padding: .15rem .4rem;
+      border-radius: .35rem;
+      background: #d8eee0;
+      color: var(--verde-escuro);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--borda);
+      color: var(--texto-suave);
+      font-size: .85rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 420px) {
+      body { padding: .75rem; }
+      .versao { font-size: .95rem; }
+    }
   </style>
 </head>
 <body>
   <main class="cartao">
-    <div class="emoji">✅</div>
+    <div class="emoji" role="img" aria-label="Concluído">🙏🏻</div>
     <h1>Versão 3 — corrigida</h1>
     <p>O erro foi corrigido e o robô publicou de novo.</p>
 
