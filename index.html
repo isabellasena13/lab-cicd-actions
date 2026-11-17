@@ -6,12 +6,13 @@
   <title>Meu site - Versão 3 — corrigida</title>
   <style>
     :root {
-      --verde: #168a4d;
-      --verde-escuro: #0d6337;
-      --fundo: #e8f7ef;
-      --texto: #173126;
-      --texto-suave: #53665c;
-      --borda: #cfe4d8;
+      --vermelho: #b42318;
+      --vermelho-escuro: #7a1d16;
+      --fundo: #fff1f1;
+      --texto: #3b1d1d;
+      --texto-suave: #7a4b4b;
+      --borda: #f5c2c2;
+      --destaque: #fee2e2;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -24,22 +25,22 @@
       padding: 1.5rem;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--texto);
-      background: linear-gradient(135deg, #c8a2c8, #e6c6e8);
+      background: linear-gradient(135deg, #f1b4b4, #f7d5d5);
     }
 
     .cartao {
       background: #fff;
-      border: 1px solid rgba(255, 255, 255, .55);
+      border: 1px solid rgba(180, 35, 24, .15);
       border-radius: 1.25rem;
       padding: clamp(1.5rem, 5vw, 2.75rem);
       max-width: 520px;
       width: 100%;
-      box-shadow: 0 1.25rem 3rem rgba(4, 45, 24, .24);
+      box-shadow: 0 1.25rem 3rem rgba(122, 29, 22, .2);
       text-align: center;
     }
 
     .emoji { font-size: 4rem; line-height: 1; }
-    h1 { margin: .75rem 0 .5rem; color: var(--verde-escuro); font-size: clamp(1.7rem, 6vw, 2.25rem); }
+    h1 { margin: .75rem 0 .5rem; color: var(--vermelho-escuro); font-size: clamp(1.7rem, 6vw, 2.25rem); }
     p { margin: 0; color: var(--texto-suave); line-height: 1.6; }
 
     .versao {
@@ -55,8 +56,8 @@
     code {
       padding: .15rem .4rem;
       border-radius: .35rem;
-      background: #d8eee0;
-      color: var(--verde-escuro);
+      background: var(--destaque);
+      color: var(--vermelho-escuro);
       overflow-wrap: anywhere;
     }
 
@@ -77,11 +78,12 @@
 </head>
 <body>
   <main class="cartao">
-    <div class="emoji" role="img" aria-label="Coração">❤️</div>
-    <h1>Deus é bom e o diabo não presta!</h1>
-    <p>E viva a Taylor Swift.</p>
+    <div class="emoji" role="img" aria-label="Aviso">⚠️</div>
+    <h1>Site em desligamento</h1>
+    <p>Este site será desligado em <strong>17/11/2026 às 20h30</strong>.</p>
 
     <div class="versao">
+      📌 <strong>Mensagem oficial:</strong> o funcionamento do site será encerrado na data e horário informados acima.<br>
       🤖 <strong>Publicado pelo robô em:</strong> __DATA__<br>
       🔖 <strong>Commit:</strong> <code>__COMMIT__</code><br>
       👤 <strong>Enviado por:</strong> __AUTOR__
